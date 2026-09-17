@@ -1,0 +1,24 @@
+# Binarios compilados (se generan mediante 'make')
+bin/*
+!bin/.gitkeep
+
+# Archivos de objetos y librerias compiladas
+*.o
+*.so
+*.a
+
+# Logs y temporales del sistema y editores
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# Archivos auxiliares temporales de LaTeX
+report/*.aux
+report/*.log
+report/*.toc
+report/*.fls
+report/*.fdb_latexmk
+report/*.synctex.gz
+report/*.out

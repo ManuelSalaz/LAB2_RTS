@@ -1,0 +1,1584 @@
+desc: --peak-inaccuracy=0.0 --stacks=yes --heap=yes --time-unit=ms --detailed-freq=1 --threshold=0.0
+cmd: ./bin/sensor_rpi
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=1
+#-----------
+time=195
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=5040
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=2
+#-----------
+time=710
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=4480
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=3
+#-----------
+time=926
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=448
+heap_tree=detailed
+n1: 72704 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+#-----------
+snapshot=4
+#-----------
+time=1155
+mem_heap_B=83400
+mem_heap_extra_B=480
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 83400 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 9984 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 9984 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 9984 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 9984 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 9984 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 9984 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 9984 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 9984 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 456 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 456 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 256 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 256 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 256 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 256 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 256 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 256 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=5
+#-----------
+time=1373
+mem_heap_B=94376
+mem_heap_extra_B=960
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 94376 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 20224 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 20224 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 20224 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 20224 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 20224 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 20224 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 20224 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 20224 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 936 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 936 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 512 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 512 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 512 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 512 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 512 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 512 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=6
+#-----------
+time=1613
+mem_heap_B=106168
+mem_heap_extra_B=1488
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 106168 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 31488 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 31488 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 31488 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 31488 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 31488 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 31488 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 31488 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 31488 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 1464 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 1464 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 512 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 512 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 512 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 512 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 512 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 512 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=7
+#-----------
+time=1819
+mem_heap_B=116480
+mem_heap_extra_B=1944
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 116480 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 40832 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 40832 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 40832 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 40832 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 40832 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 40832 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 40832 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 40832 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 1920 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 1920 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 1024 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 1024 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 1024 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 1024 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 1024 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 1024 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=8
+#-----------
+time=1956
+mem_heap_B=123040
+mem_heap_extra_B=2224
+mem_stacks_B=624
+heap_tree=detailed
+n4: 123040 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 47104 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 47104 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 47104 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 47104 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 47104 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 47104 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 47104 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 47104 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 2208 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 2208 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 1024 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 1024 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 1024 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 1024 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 1024 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 1024 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=9
+#-----------
+time=2159
+mem_heap_B=133480
+mem_heap_extra_B=2688
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 133480 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 57088 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 57088 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 57088 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 57088 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 57088 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 57088 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 57088 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 57088 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 2664 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 2664 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 1024 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 1024 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 1024 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 1024 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 1024 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 1024 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=10
+#-----------
+time=2376
+mem_heap_B=144840
+mem_heap_extra_B=3168
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 144840 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 66944 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 66944 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 66944 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 66944 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 66944 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 66944 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 66944 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 66944 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 3144 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 3144 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 2048 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 2048 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 2048 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 2048 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 2048 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 2048 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=11
+#-----------
+time=2587
+mem_heap_B=155408
+mem_heap_extra_B=3624
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 155408 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 77056 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 77056 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 77056 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 77056 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 77056 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 77056 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 77056 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 77056 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 3600 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 3600 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 2048 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 2048 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 2048 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 2048 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 2048 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 2048 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=12
+#-----------
+time=2892
+mem_heap_B=170416
+mem_heap_extra_B=4296
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 170416 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 91392 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 91392 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 91392 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 91392 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 91392 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 91392 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 91392 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 91392 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 4272 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 4272 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 2048 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 2048 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 2048 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 2048 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 2048 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 2048 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=13
+#-----------
+time=3166
+mem_heap_B=183816
+mem_heap_extra_B=4896
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 183816 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 104192 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 104192 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 104192 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 104192 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 104192 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 104192 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 104192 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 104192 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 4872 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 4872 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 2048 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 2048 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 2048 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 2048 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 2048 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 2048 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=14
+#-----------
+time=3341
+mem_heap_B=192392
+mem_heap_extra_B=5280
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 192392 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 112384 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 112384 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 112384 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 112384 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 112384 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 112384 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 112384 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 112384 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 5256 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 5256 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 2048 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 2048 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 2048 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 2048 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 2048 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 2048 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=15
+#-----------
+time=3624
+mem_heap_B=206328
+mem_heap_extra_B=5904
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 206328 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 125696 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 125696 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 125696 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 125696 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 125696 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 125696 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 125696 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 125696 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 5880 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 5880 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 2048 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 2048 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 2048 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 2048 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 2048 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 2048 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=16
+#-----------
+time=3797
+mem_heap_B=216568
+mem_heap_extra_B=6288
+mem_stacks_B=1024
+heap_tree=detailed
+n4: 216568 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 133504 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 133504 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 133504 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 133504 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 133504 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 133504 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 133504 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 133504 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 6264 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 6264 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 4096 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 4096 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 4096 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 4096 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 4096 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 4096 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=17
+#-----------
+time=3984
+mem_heap_B=225680
+mem_heap_extra_B=6696
+mem_stacks_B=1024
+heap_tree=detailed
+n4: 225680 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 142208 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 142208 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 142208 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 142208 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 142208 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 142208 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 142208 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 142208 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 6672 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 6672 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 4096 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 4096 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 4096 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 4096 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 4096 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 4096 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=18
+#-----------
+time=4237
+mem_heap_B=238392
+mem_heap_extra_B=7248
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 238392 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 154368 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 154368 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 154368 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 154368 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 154368 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 154368 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 154368 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 154368 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 7224 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 7224 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 4096 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 4096 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 4096 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 4096 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 4096 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 4096 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=19
+#-----------
+time=4412
+mem_heap_B=246968
+mem_heap_extra_B=7632
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 246968 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 162560 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 162560 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 162560 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 162560 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 162560 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 162560 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 162560 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 162560 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 7608 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 7608 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 4096 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 4096 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 4096 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 4096 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 4096 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 4096 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=20
+#-----------
+time=4673
+mem_heap_B=259832
+mem_heap_extra_B=8208
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 259832 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 174848 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 174848 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 174848 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 174848 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 174848 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 174848 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 174848 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 174848 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 8184 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 8184 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 4096 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 4096 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 4096 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 4096 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 4096 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 4096 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=21
+#-----------
+time=4944
+mem_heap_B=272848
+mem_heap_extra_B=8808
+mem_stacks_B=1024
+heap_tree=detailed
+n4: 272848 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 187264 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 187264 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 187264 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 187264 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 187264 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 187264 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 187264 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 187264 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 8784 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 8784 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 4096 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 4096 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 4096 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 4096 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 4096 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 4096 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=22
+#-----------
+time=5206
+mem_heap_B=285712
+mem_heap_extra_B=9384
+mem_stacks_B=1024
+heap_tree=detailed
+n4: 285712 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 199552 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 199552 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 199552 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 199552 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 199552 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 199552 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 199552 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 199552 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 9360 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 9360 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 4096 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 4096 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 4096 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 4096 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 4096 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 4096 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=23
+#-----------
+time=5405
+mem_heap_B=295744
+mem_heap_extra_B=9816
+mem_stacks_B=1024
+heap_tree=detailed
+n4: 295744 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 209152 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 209152 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 209152 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 209152 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 209152 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 209152 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 209152 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 209152 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 9792 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 9792 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 4096 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 4096 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 4096 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 4096 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 4096 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 4096 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=24
+#-----------
+time=5679
+mem_heap_B=309144
+mem_heap_extra_B=10416
+mem_stacks_B=1024
+heap_tree=detailed
+n4: 309144 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 221952 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 221952 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 221952 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 221952 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 221952 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 221952 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 221952 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 221952 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 10392 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 10392 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 4096 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 4096 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 4096 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 4096 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 4096 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 4096 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=25
+#-----------
+time=5951
+mem_heap_B=322544
+mem_heap_extra_B=11016
+mem_stacks_B=1024
+heap_tree=detailed
+n4: 322544 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 234752 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 234752 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 234752 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 234752 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 234752 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 234752 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 234752 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 234752 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 10992 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 10992 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 4096 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 4096 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 4096 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 4096 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 4096 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 4096 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=26
+#-----------
+time=6223
+mem_heap_B=335944
+mem_heap_extra_B=11616
+mem_stacks_B=1024
+heap_tree=detailed
+n4: 335944 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 247552 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 247552 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 247552 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 247552 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 247552 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 247552 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 247552 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 247552 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 11592 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 11592 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 4096 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 4096 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 4096 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 4096 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 4096 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 4096 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=27
+#-----------
+time=6496
+mem_heap_B=349344
+mem_heap_extra_B=12216
+mem_stacks_B=1024
+heap_tree=detailed
+n4: 349344 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 260352 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 260352 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 260352 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 260352 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 260352 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 260352 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 260352 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 260352 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 12192 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 12192 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 4096 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 4096 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 4096 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 4096 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 4096 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 4096 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=28
+#-----------
+time=6832
+mem_heap_B=369672
+mem_heap_extra_B=12960
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 369672 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 275840 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 275840 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 275840 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 275840 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 275840 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 275840 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 275840 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 275840 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 12936 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 12936 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=29
+#-----------
+time=7104
+mem_heap_B=383072
+mem_heap_extra_B=13560
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 383072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 288640 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 288640 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 288640 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 288640 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 288640 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 288640 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 288640 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 288640 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 13536 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 13536 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=30
+#-----------
+time=7376
+mem_heap_B=396472
+mem_heap_extra_B=14160
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 396472 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 301440 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 301440 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 301440 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 301440 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 301440 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 301440 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 301440 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 301440 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 14136 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 14136 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=31
+#-----------
+time=7648
+mem_heap_B=409872
+mem_heap_extra_B=14760
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 409872 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 314240 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 314240 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 314240 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 314240 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 314240 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 314240 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 314240 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 314240 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 14736 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 14736 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=32
+#-----------
+time=7781
+mem_heap_B=416688
+mem_heap_extra_B=15048
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 416688 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 320768 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 320768 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 320768 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 320768 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 320768 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 320768 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 320768 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 320768 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 15024 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 15024 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=33
+#-----------
+time=8053
+mem_heap_B=430088
+mem_heap_extra_B=15648
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 430088 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 333568 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 333568 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 333568 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 333568 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 333568 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 333568 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 333568 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 333568 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 15624 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 15624 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=34
+#-----------
+time=8193
+mem_heap_B=436672
+mem_heap_extra_B=15960
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 436672 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 339840 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 339840 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 339840 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 339840 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 339840 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 339840 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 339840 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 339840 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 15936 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 15936 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=35
+#-----------
+time=8465
+mem_heap_B=450072
+mem_heap_extra_B=16560
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 450072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 352640 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 352640 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 352640 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 352640 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 352640 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 352640 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 352640 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 352640 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 16536 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 16536 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=36
+#-----------
+time=8599
+mem_heap_B=456888
+mem_heap_extra_B=16848
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 456888 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 359168 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 359168 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 359168 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 359168 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 359168 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 359168 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 359168 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 359168 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 16824 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 16824 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=37
+#-----------
+time=8871
+mem_heap_B=470288
+mem_heap_extra_B=17448
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 470288 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 371968 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 371968 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 371968 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 371968 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 371968 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 371968 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 371968 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 371968 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 17424 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 17424 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=38
+#-----------
+time=9143
+mem_heap_B=483688
+mem_heap_extra_B=18048
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 483688 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 384768 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 384768 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 384768 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 384768 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 384768 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 384768 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 384768 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 384768 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 18024 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 18024 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=39
+#-----------
+time=9283
+mem_heap_B=490272
+mem_heap_extra_B=18360
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 490272 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 391040 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 391040 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 391040 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 391040 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 391040 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 391040 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 391040 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 391040 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 18336 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 18336 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=40
+#-----------
+time=9555
+mem_heap_B=503672
+mem_heap_extra_B=18960
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 503672 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 403840 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 403840 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 403840 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 403840 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 403840 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 403840 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 403840 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 403840 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 18936 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 18936 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=41
+#-----------
+time=9828
+mem_heap_B=517072
+mem_heap_extra_B=19560
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 517072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 416640 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 416640 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 416640 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 416640 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 416640 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 416640 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 416640 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 416640 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 19536 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 19536 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=42
+#-----------
+time=10100
+mem_heap_B=530472
+mem_heap_extra_B=20160
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 530472 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 429440 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 429440 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 429440 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 429440 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 429440 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 429440 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 429440 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 429440 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 20136 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 20136 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=43
+#-----------
+time=10372
+mem_heap_B=543872
+mem_heap_extra_B=20760
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 543872 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 442240 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 442240 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 442240 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 442240 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 442240 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 442240 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 442240 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 442240 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 20736 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 20736 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=44
+#-----------
+time=10645
+mem_heap_B=557272
+mem_heap_extra_B=21360
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 557272 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 455040 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 455040 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 455040 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 455040 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 455040 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 455040 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 455040 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 455040 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 21336 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 21336 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=45
+#-----------
+time=10918
+mem_heap_B=570672
+mem_heap_extra_B=21960
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 570672 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 467840 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 467840 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 467840 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 467840 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 467840 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 467840 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 467840 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 467840 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 21936 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 21936 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=46
+#-----------
+time=11190
+mem_heap_B=584072
+mem_heap_extra_B=22560
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 584072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 480640 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 480640 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 480640 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 480640 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 480640 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 480640 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 480640 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 480640 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 22536 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 22536 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=47
+#-----------
+time=11464
+mem_heap_B=597472
+mem_heap_extra_B=23160
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 597472 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 493440 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 493440 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 493440 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 493440 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 493440 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 493440 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 493440 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 493440 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 23136 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 23136 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=48
+#-----------
+time=11737
+mem_heap_B=610872
+mem_heap_extra_B=23760
+mem_stacks_B=1072
+heap_tree=detailed
+n4: 610872 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 506240 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 506240 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 506240 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 506240 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 506240 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 506240 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 506240 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 506240 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 23736 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 23736 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=49
+#-----------
+time=11868
+mem_heap_B=616896
+mem_heap_extra_B=24016
+mem_stacks_B=2080
+heap_tree=detailed
+n4: 616896 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 512000 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 512000 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 512000 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 512000 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 512000 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 512000 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 512000 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 512000 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 24000 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 24000 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+#-----------
+snapshot=50
+#-----------
+time=11868
+mem_heap_B=617920
+mem_heap_extra_B=24024
+mem_stacks_B=1232
+heap_tree=detailed
+n5: 617920 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 512000 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 512000 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 512000 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 512000 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 512000 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 512000 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 512000 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 512000 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 24000 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 24000 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+ n1: 1024 0x4B7D1BB: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B8B9CF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B8B9CF: _IO_doallocbuf (genops.c:342)
+    n1: 1024 0x4B8AD9B: _IO_file_overflow@@GLIBC_2.17 (fileops.c:744)
+     n1: 1024 0x4B89F27: _IO_new_file_xsputn (fileops.c:1243)
+      n1: 1024 0x4B89F27: _IO_file_xsputn@@GLIBC_2.17 (fileops.c:1196)
+       n1: 1024 0x4B7E73F: fwrite (iofwrite.c:39)
+        n1: 1024 0x49D98AB: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+         n1: 1024 0x49D9BCF: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+          n0: 1024 0x109273: main (sensor_data_processing.cpp:57)
+#-----------
+snapshot=51
+#-----------
+time=11871
+mem_heap_B=617920
+mem_heap_extra_B=24024
+mem_stacks_B=1504
+heap_tree=detailed
+n5: 617920 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 512000 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 512000 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 512000 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 512000 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 512000 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 512000 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 512000 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 512000 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 24000 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 24000 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+ n1: 1024 0x4B7D1BB: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B8B9CF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B8B9CF: _IO_doallocbuf (genops.c:342)
+    n1: 1024 0x4B8AD9B: _IO_file_overflow@@GLIBC_2.17 (fileops.c:744)
+     n1: 1024 0x4B89F27: _IO_new_file_xsputn (fileops.c:1243)
+      n1: 1024 0x4B89F27: _IO_file_xsputn@@GLIBC_2.17 (fileops.c:1196)
+       n1: 1024 0x4B7E73F: fwrite (iofwrite.c:39)
+        n1: 1024 0x49D98AB: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+         n1: 1024 0x49D9BCF: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+          n0: 1024 0x109273: main (sensor_data_processing.cpp:57)
+#-----------
+snapshot=52
+#-----------
+time=11872
+mem_heap_B=617920
+mem_heap_extra_B=24024
+mem_stacks_B=1600
+heap_tree=detailed
+n5: 617920 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 512000 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 512000 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 512000 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 512000 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 512000 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 512000 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 512000 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 512000 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 24000 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 24000 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+ n1: 1024 0x4B7D1BB: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B8B9CF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B8B9CF: _IO_doallocbuf (genops.c:342)
+    n1: 1024 0x4B8AD9B: _IO_file_overflow@@GLIBC_2.17 (fileops.c:744)
+     n1: 1024 0x4B89F27: _IO_new_file_xsputn (fileops.c:1243)
+      n1: 1024 0x4B89F27: _IO_file_xsputn@@GLIBC_2.17 (fileops.c:1196)
+       n1: 1024 0x4B7E73F: fwrite (iofwrite.c:39)
+        n1: 1024 0x49D98AB: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+         n1: 1024 0x49D9BCF: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+          n0: 1024 0x109273: main (sensor_data_processing.cpp:57)
+#-----------
+snapshot=53
+#-----------
+time=11873
+mem_heap_B=617920
+mem_heap_extra_B=24024
+mem_stacks_B=1904
+heap_tree=peak
+n5: 617920 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 512000 0x10A9AB: std::__new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 512000 0x10A697: std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) (alloc_traits.h:464)
+   n1: 512000 0x10A3BB: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 512000 0x109C8B: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int&&) (vector.tcc:453)
+     n1: 512000 0x10972F: void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) (vector.tcc:123)
+      n1: 512000 0x109443: std::vector<int, std::allocator<int> >::push_back(int&&) (stl_vector.h:1294)
+       n1: 512000 0x1090AB: generate_sensor_data() (sensor_data_processing.cpp:19)
+        n0: 512000 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 72704 0x494E757: ??? (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x4004447: call_init (dl-init.c:74)
+   n1: 72704 0x4004447: call_init (dl-init.c:26)
+    n1: 72704 0x4004553: _dl_init (dl-init.c:121)
+     n0: 72704 0x401AD37: (below main) (dl-start.S:46)
+ n1: 24000 0x10906B: generate_sensor_data() (sensor_data_processing.cpp:16)
+  n0: 24000 0x1091D3: main (sensor_data_processing.cpp:45)
+ n1: 8192 0x10A823: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:137)
+  n1: 8192 0x10A5AB: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:464)
+   n1: 8192 0x10A0F7: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:378)
+    n1: 8192 0x109917: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:453)
+     n1: 8192 0x1095FB: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1287)
+      n0: 8192 0x1091EF: main (sensor_data_processing.cpp:49)
+ n1: 1024 0x4B7D1BB: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4B8B9CF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4B8B9CF: _IO_doallocbuf (genops.c:342)
+    n1: 1024 0x4B8AD9B: _IO_file_overflow@@GLIBC_2.17 (fileops.c:744)
+     n1: 1024 0x4B89F27: _IO_new_file_xsputn (fileops.c:1243)
+      n1: 1024 0x4B89F27: _IO_file_xsputn@@GLIBC_2.17 (fileops.c:1196)
+       n1: 1024 0x4B7E73F: fwrite (iofwrite.c:39)
+        n1: 1024 0x49D98AB: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+         n1: 1024 0x49D9BCF: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.30)
+          n0: 1024 0x109273: main (sensor_data_processing.cpp:57)
